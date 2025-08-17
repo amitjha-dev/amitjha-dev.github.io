@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amit — Team Lead / Software Engineer</title>
+  <meta name="description" content="Amit | Team Lead | PHP, Laravel, Node.js, React, MySQL, MongoDB, AWS — 15+ years experience" />
+
+  <style>
+    /* Basic reset */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;line-height:1.5;color:#0f172a;background:#f8fafc}
+
+    /* Layout */
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{background:#fff;border-bottom:1px solid #e6eef6;position:sticky;top:0;z-index:30}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{font-weight:700;font-size:1.1rem;color:#0b5086}
+    nav a{margin-left:18px;text-decoration:none;color:#0f172a;font-weight:600}
+    .hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:56px 18px;border-radius:10px;background:linear-gradient(120deg,#eef7ff,#f3f6ff)}
+    .hero h1{font-size:2.1rem;margin:6px 0}
+    .hero p{max-width:780px;color:#334155;margin:10px 0 18px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(11,81,134,0.08)}
+    .btn-primary{background:#0b63a0;color:#fff}
+    .btn-ghost{background:transparent;border:2px solid #cfe6ff;color:#0b63a0;margin-left:8px}
+
+    /* Sections */
+    section{padding:44px 0}
+    h2{font-size:1.35rem;margin:0 0 12px;color:#0b3b5d}
+    p.lead{color:#475569;margin:0 0 12px}
+    .grid{display:grid;gap:16px}
+    .skills{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+    .skill{background:#fff;padding:14px;border-radius:10px;border:1px solid #e6eef6;text-align:center;font-weight:700}
+    .projects{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{background:#fff;padding:18px;border-radius:12px;border:1px solid #e6eef6}
+    .muted{color:#64748b;font-size:0.95rem}
+
+    /* Contact icons row */
+    .icons{display:flex;gap:14px;justify-content:center;align-items:center}
+    .icon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:8px;background:#fff;border:1px solid #e6eef6;text-decoration:none;color:#0b63a0;font-weight:700}
+
+    footer{padding:22px 0;text-align:center;color:#475569;font-size:0.95rem}
+
+    /* Responsive */
+    @media (min-width:800px){
+      .hero{padding:72px 18px}
+      .nav a{margin-left:22px}
+    }
+
+    /* small helper */
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+    .right{margin-left:auto}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="nav" role="navigation" aria-label="Main navigation">
+      <div class="brand">Amit — Team Lead</div>
+      <div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <!-- Hero -->
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">Hi, I'm Amit 👋</h1>
+      <p class="lead">
+        Team Lead & Senior Software Engineer with 15+ years building scalable web systems.
+        Expertise: PHP (Laravel, CodeIgniter), Node.js, React, MySQL, MongoDB, Redis, AWS.
+        I design systems, mentor teams, and ship reliable products.
+      </p>
+      <div>
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-ghost" href="#contact">Contact Me</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <p class="muted">
+        Experienced software professional currently leading development teams. I focus on clean architecture,
+        performance, and mentoring engineers. I enjoy solving complex problems and creating maintainable systems
+        that scale under load.
+      </p>
+      <div class="row" style="margin-top:14px;">
+        <div class="card" style="flex:1;min-width:220px">
+          <strong>Current Role</strong>
+          <div class="muted">Team Lead (Development & Delivery)</div>
+          <p class="muted" style="margin-top:10px;">Hands-on with architecture, debugging, release management and people leadership.</p>
+        </div>
+
+        <div class="card" style="flex:1;min-width:220px">
+          <strong>Approach</strong>
+          <div class="muted">Pragmatic, data-driven, and team-first</div>
+          <p class="muted" style="margin-top:10px;">Prioritise high-impact improvements, performance, and developer productivity.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <p class="muted">Technical strengths and tools I use regularly.</p>
+
+      <div class="grid skills" style="margin-top:14px;">
+        <div class="skill">PHP</div>
+        <div class="skill">Laravel</div>
+        <div class="skill">CodeIgniter</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">React</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">MongoDB</div>
+        <div class="skill">Redis</div>
+        <div class="skill">AWS</div>
+        <div class="skill">Docker</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Selected Projects</h2>
+      <p class="muted">A few highlights that show scale and impact.</p>
+
+      <div class="grid projects" style="margin-top:16px;">
+        <article class="card">
+          <h3 style="margin:0 0 8px">Multi-Tenant SaaS Platform</h3>
+          <p class="muted">Architected a multi-tenant SaaS using Laravel and AWS with tenant isolation, CI/CD pipelines and monitoring. Focus on secure data separation and scale.</p>
+          <p style="margin-top:10px"><strong>Highlights:</strong> tenancy, autoscaling, backups, RBAC</p>
+        </article>
+
+        <article class="card">
+          <h3 style="margin:0 0 8px">Large Dropshipping Marketplace</h3>
+          <p class="muted">Built and optimised a dropshipping system handling lakhs of SKUs using CodeIgniter, Redis, MySQL and RabbitMQ. Improved listing performance and reduced page load time.</p>
+          <p style="margin-top:10px"><strong>Highlights:</strong> caching, queueing, SKU variants, performance tuning</p>
+        </article>
+
+        <article class="card">
+          <h3 style="margin:0 0 8px">Brain Tuner — Frontend App</h3>
+          <p class="muted">React game for cognitive practice with timers, quick scoring and analytics. Implemented accessible UI and lightweight state management.</p>
+          <p style="margin-top:10px"><strong>Highlights:</strong> React, accessibility, animation</p>
+        </article>
+
+        <article class="card">
+          <h3 style="margin:0 0 8px">Bulk Pincode Management Tool</h3>
+          <p class="muted">Node.js & MongoDB tool to bulk import pin codes from CSV/XLS, validate and manage delivery regions with admin UI.</p>
+          <p style="margin-top:10px"><strong>Highlights:</strong> CSV/XLS parsing, validation, admin workflows</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-heading" style="text-align:center">
+      <h2 id="contact-heading">Get In Touch</h2>
+      <p class="muted">Open to leadership roles, contract engagements, and technical advisory.</p>
+
+      <div style="margin-top:16px">
+        <a class="icon" href="https://github.com/" target="_blank" rel="noopener noreferrer" title="GitHub">GH</a>
+        <a class="icon" href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" title="LinkedIn">IN</a>
+        <a class="icon" href="mailto:your@email.com" title="Email">✉️</a>
+      </div>
+
+      <div style="margin-top:18px">
+        <a class="btn btn-primary" href="mailto:your@email.com?subject=Opportunity%20-%20Team%20Lead">
+          Email Me
+        </a>
+        <a class="btn btn-ghost" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Amit — Team Lead. Proudly building reliable software.
+    </footer>
+  </div>
+</main>
+
+<script>
+  // small script: set year and enable smooth scroll for anchor links
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const target = document.querySelector(a.getAttribute('href'));
+      if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth',block:'start'}) }
+    })
+  });
+</script>
+
+</body>
+</html>
+
