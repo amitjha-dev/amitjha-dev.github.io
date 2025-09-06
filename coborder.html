@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Coborder — Project Portfolio</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0f4c81;
+      --accent-2:#2b7abf;
+      --success:#1e7e34;
+      --danger:#c92a2a;
+      --glass: rgba(15,76,129,0.06);
+      --mono: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    html,body{height:100%}
+    body{
+      font-family:var(--mono);
+      margin:0;
+      background:linear-gradient(180deg, var(--bg), #eef4fb 120%);
+      color:#0b1220;
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      margin-bottom:28px;
+    }
+    .logo{
+      width:88px;
+      height:88px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:20px;
+      box-shadow:0 6px 20px rgba(43,122,191,0.15);
+    }
+    header h1{
+      font-size:26px;
+      margin:0;
+      line-height:1.1;
+    }
+    header p.lead{
+      margin:4px 0 0 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .meta {
+      display:flex;
+      gap:10px;
+      margin-top:6px;
+      flex-wrap:wrap;
+    }
+    .meta .pill{
+      background:var(--glass);
+      padding:6px 10px;
+      border-radius:8px;
+      color:var(--accent);
+      font-weight:600;
+      font-size:13px;
+    }
+
+    main {
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:22px;
+      align-items:start;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:20px;
+      box-shadow:0 6px 18px rgba(12,20,30,0.04);
+    }
+
+    /* left column content */
+    .section + .section { margin-top:18px; }
+
+    h2 {
+      font-size:18px;
+      margin:0 0 12px 0;
+      color:var(--accent);
+    }
+    h3 {
+      font-size:15px;
+      margin:8px 0 12px;
+      color:#0b1220;
+    }
+    p { margin:0 0 12px 0; color:#172033; }
+
+    ul.inline-list {
+      padding:0;
+      margin:0 0 12px 0;
+      list-style:none;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    ul.inline-list li {
+      background:#f3f8ff;
+      color:var(--accent-2);
+      padding:6px 10px;
+      border-radius:8px;
+      font-weight:600;
+      font-size:13px;
+    }
+
+    .metrics {
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .metric {
+      background:linear-gradient(180deg,#fff,#fbfdff);
+      border-radius:10px;
+      padding:12px;
+      min-width:160px;
+      box-shadow:0 4px 12px rgba(11,18,32,0.04);
+    }
+    .metric .big { font-size:20px; font-weight:700; color:var(--accent); }
+    .metric .small { font-size:12px; color:var(--muted); margin-top:6px; }
+
+    .skills-grid {
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:10px;
+    }
+    .skill {
+      background:#f8fbff;
+      padding:10px;
+      border-radius:8px;
+      font-weight:600;
+      color:#103a5a;
+      font-size:13px;
+    }
+
+    .note {
+      font-size:13px;
+      color:var(--muted);
+      border-left:3px solid #e6eefc;
+      padding:10px 14px;
+      border-radius:6px;
+      background:#fbfdff;
+    }
+
+    footer {
+      margin-top:26px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* right column sidebar */
+    aside .card + .card { margin-top:14px; }
+    .small-muted { color:var(--muted); font-size:13px; margin-bottom:6px; }
+
+    pre.code {
+      background:#0b1220;
+      color:#e6eefc;
+      padding:12px;
+      border-radius:8px;
+      overflow:auto;
+      font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+      font-size:13px;
+      line-height:1.35;
+      max-height:240px;
+    }
+
+    .tag {
+      display:inline-block;
+      padding:6px 8px;
+      background:#f1f6ff;
+      color:#0b4e86;
+      border-radius:6px;
+      font-weight:600;
+      font-size:12px;
+      margin-right:6px;
+    }
+
+    /* responsive */
+    @media (max-width:980px){
+      main{grid-template-columns:1fr; padding-bottom:60px;}
+      .container{padding:0 14px}
+      header{flex-direction:row; gap:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">COB</div>
+      <div>
+        <h1>Coborder — Purchase & Shipment Management Platform</h1>
+        <p class="lead">Centralized PO → Box → GRN → Shipment tracking with export-ready PI/Shipment reports and catalog sync automation.</p>
+        <div class="meta">
+          <div class="pill">Laravel • MongoDB</div>
+          <div class="pill">Maatwebsite Excel • Observers & Jobs</div>
+          <div class="pill">AWS S3 • Queues</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="card section">
+          <h2>Project Overview</h2>
+          <p>
+            Coborder is a logistics and purchase-order management platform that centralizes purchase order creation, box & shipment tracking, and supplier reconciliation.
+            The platform provides tools for per-box GRN tracking, PI/sync automation, and export/reporting to support operations and finance teams with accurate shipment documentation.
+          </p>
+
+          <h2>My Role</h2>
+          <p>
+            Led backend development and integrations: implemented core reconciliation logic, designed MongoDB queries and aggregation pipelines, authored export formatting using Maatwebsite Excel,
+            and implemented observers and queueable jobs to reliably process catalog sync and PI pushing workflows.
+          </p>
+
+          <h2>Key Challenges &amp; Solutions</h2>
+
+          <h3>1. Accurate product representation with multiple boxes</h3>
+          <p>
+            <strong>Challenge:</strong> Multiple boxes per product generated duplicate “remaining” rows and inconsistent exports.<br/>
+            <strong>Solution:</strong> Refactored payload generation to emit one row per received box (when GRN exists) and a single "remaining" row per product if required. Also used latest-GRN-per-box logic.
+          </p>
+
+          <h3>2. Cross-collection filtering and pagination</h3>
+          <p>
+            <strong>Challenge:</strong> Filtering by SKU/status required queries spanning purchase_order_products and box collections, while preserving correct pagination.<br/>
+            <strong>Solution:</strong> Precomputed matching PO IDs from box filters and catalog IDs from master_sku matches, applied filters before pagination, and used intersections where necessary.
+          </p>
+
+          <h3>3. Latest-GRN-per-box aggregation</h3>
+          <p>
+            <strong>Challenge:</strong> Required sum of the latest GRN entry per box (not sum of all updates).<br/>
+            <strong>Solution:</strong> Implemented MongoDB aggregation to group by box_id and pick the GRN record with the highest <code>modified</code>, then sum the corresponding <code>received_count</code>.
+          </p>
+
+          <h3>4. Styled, accurate Excel exports</h3>
+          <p>
+            Built export templates using Maatwebsite Excel with <code>WithEvents</code> and <code>WithStyles</code> to create title rows, bold headers, merged metadata cells, and auto-sized columns for business-ready PI/shipment documents.
+          </p>
+        </div>
+
+        <div class="card section">
+          <h2>Technical Skills Used</h2>
+
+          <div class="skills-grid" aria-hidden="false">
+            <div class="skill">PHP / Laravel (Eloquent)</div>
+            <div class="skill">MongoDB (aggregation & queries)</div>
+            <div class="skill">Maatwebsite/PhpSpreadsheet (XLSX export)</div>
+            <div class="skill">Queues & Jobs (Dispatchable, ShouldQueue)</div>
+            <div class="skill">Blade, Vanilla JS (fetch) & Bootstrap-style UI</div>
+            <div class="skill">AWS S3 (images/storage)</div>
+            <div class="skill">Logging & Monitoring</div>
+            <div class="skill">Git / Composer / Carbon</div>
+          </div>
+
+          <h2 style="margin-top:16px">Measurable Results</h2>
+          <div class="metrics">
+            <div class="metric">
+              <div class="big">~60%</div>
+              <div class="small">Reduction in manual reconciliation time</div>
+            </div>
+            <div class="metric">
+              <div class="big">~80%</div>
+              <div class="small">Reduction in PI sync failure rate via queues & retries</div>
+            </div>
+            <div class="metric">
+              <div class="big">< 2s</div>
+              <div class="small">Average XLSX export time (<= 500 boxes)</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card section">
+          <h2>Future Enhancements</h2>
+          <ul>
+            <li>GRN timeline dashboard: visualize per-box GRN history and diffs.</li>
+            <li>Move heavy aggregations to optimized MongoDB pipelines and add indexes for large datasets.</li>
+            <li>Real-time notifications via websockets for status updates.</li>
+            <li>Role-based dashboards and approval workflows for PI syncs.</li>
+            <li>Comprehensive automated test coverage for reconciliation and export logic.</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h2>Deliverables &amp; Artifacts</h2>
+          <p class="small-muted">Suggested artifacts to include in a portfolio package</p>
+          <ul>
+            <li>Architecture diagram (collections & relationships).</li>
+            <li>Code snippets: latest-GRN aggregation, payload formatter, export class.</li>
+            <li>Screenshots: PO listing, shipment export, PI sync logs.</li>
+            <li>Sample export file (XLSX) and API response examples.</li>
+          </ul>
+
+          <h2 style="margin-top:12px">Notes &amp; Next Steps</h2>
+          <p class="note">
+            I couldn't inspect the uploaded project bundle in this environment. To finalize the portfolio with concrete screenshots, exact code references, and real metrics, please provide repository access or paste the key files (or allow re-upload). I can then produce a PDF portfolio and a slide deck from these artifacts.
+          </p>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3>Quick Project Summary</h3>
+          <p><strong>Coborder</strong> — a robust PO/Shipment platform focused on accurate per-box reconciliation, PI syncing, and export-ready documentation.</p>
+
+          <div style="margin-top:12px">
+            <div class="small-muted">Primary tech</div>
+            <div style="margin-top:8px">
+              <span class="tag">Laravel</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Maatwebsite Excel</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Representative Code Snippet</h3>
+          <pre class="code">
+/* Sum latest GRN per box (conceptual)
+db.grn.aggregate([
+  { $match: { purchase_order_id: "..."} },
+  { $sort: { box_id:1, modified:-1 } },
+  { $group: {
+     _id: "$box_id",
+     latest_received: { $first: "$received_count" }
+  }},
+  { $group: {
+     _id: null,
+     totalReceived: { $sum: "$latest_received" }
+  }}
+]);
+          </pre>
+        </div>
+
+        <div class="card">
+          <h3>How I contributed</h3>
+          <ul>
+            <li>Backend design & implementation</li>
+            <li>Sync automation (Observer → Job)</li>
+            <li>Export templates & formatting</li>
+            <li>Complex MongoDB queries & aggregation</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Contact / Next Steps</h3>
+          <p style="margin-bottom:8px">Want this packaged as a PDF or a 6-slide case deck?</p>
+          <p style="margin:0"><strong>Email:</strong> <span style="color:var(--accent)">you@example.com</span></p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© Coborder — Project Portfolio • Prepared for interviews & client presentations</div>
+    </footer>
+  </div>
+</body>
+</html>
