@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amit Jha • Project Portfolio</title>
+  <style>
+    :root{
+      --bg:#0b1020;--card:#121735;--ink:#eef2ff;--muted:#b8c1ec;--accent:#7c3aed;--accent-2:#22d3ee;
+      --chip:#1f2547;--ok:#16a34a;--warn:#f59e0b;--danger:#ef4444;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#080b1a 0%,#0d1229 100%);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:40px auto;padding:0 20px}
+    header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .title{font-weight:800;letter-spacing:.3px;font-size:clamp(20px,2.2vw,28px)}
+    .tagline{color:var(--muted);font-size:14px}
+    .actions{display:flex;gap:10px}
+    button{border:0;border-radius:12px;padding:10px 14px;background:var(--accent);color:white;font-weight:600;cursor:pointer}
+    button.secondary{background:var(--chip)}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{grid-column:span 12;background:linear-gradient(180deg,var(--card),#0f1440);border:1px solid #1f275c;border-radius:18px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .card h3{margin:0 0 8px;font-size:clamp(18px,2vw,22px)}
+    .card .meta{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 14px}
+    .chip{background:var(--chip);border:1px solid #2b356d;color:var(--muted);padding:4px 10px;border-radius:999px;font-size:12px}
+    .pill{padding:2px 8px;border-radius:999px;font-weight:700;font-size:11px}
+    .ok{background:#082916;color:#75f0a5;border:1px solid #164c2b}
+    .warn{background:#2a2107;color:#ffd889;border:1px solid #4a3e12}
+    .danger{background:#2a0b0b;color:#ffb4b4;border:1px solid #5a1c1c}
+    .split{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+    .section{margin:10px 0}
+    .section h4{margin:0 0 6px;color:#c7d2fe;font-size:13px;letter-spacing:.4px;text-transform:uppercase}
+    ul{margin:0;padding-left:18px}
+    li{margin:2px 0}
+    .kv{display:grid;grid-template-columns:160px 1fr;gap:8px;font-size:14px}
+    .kv div{padding:4px 0;border-bottom:1px dashed #29306b}
+    .kv div b{color:#c7d2fe}
+    footer{margin:26px 0 60px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* print */
+    @media print{button,.actions{display:none!important} body{background:#fff;color:#000} .card{box-shadow:none;background:#fff;border:1px solid #e5e7eb} .chip{border-color:#e5e7eb;color:#111827;background:#f9fafb} .ok,.warn,.danger{border:1px solid #e5e7eb;background:#fff;color:#111} a{color:#000;text-decoration:underline} }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <div class="title">Amit — Project Portfolio</div>
+        <div class="tagline">15+ years | PHP · Laravel · CodeIgniter · Node.js · TypeScript · MongoDB · MySQL · AWS · Redis · RabbitMQ</div>
+      </div>
+      <div class="actions">
+        <button onclick="window.print()">Print / Save as PDF</button>
+        <button class="secondary" onclick="toggleAll()">Expand / Collapse All</button>
+      </div>
+    </header>
+
+    <!-- TEMPLATE NOTE: Duplicate a .card for each project. Fill the sections. Keep bullets tight and outcome-focused. -->
+
+    <!-- Project 1: SourceInfi (Drop-shipping Platform) -->
+    <article class="card" data-open>
+      <h3>SourceInfi — Drop‑shipping SaaS Platform</h3>
+      <div class="meta">
+        <span class="chip">Role: Team Lead & Principal Engineer</span>
+        <span class="chip">Stack: PHP (CodeIgniter) · Node.js · MySQL · MongoDB · Redis · RabbitMQ · AWS</span>
+        <span class="pill ok">Production</span>
+      </div>
+      <div class="split">
+        <section class="section">
+          <h4>Project Overview</h4>
+          <p>Built a multi‑tenant marketplace connecting suppliers and resellers across India, with catalog sync, variant media, reseller‑specific pricing, and order lifecycle automation (creation → payment → fulfillment → returns).</p>
+          <h4>Key Challenges & Solutions</h4>
+          <ul>
+            <li><b>Massive product catalog (lakhs of SKUs) & slow list view</b> → Introduced read‑optimized projections, Redis caching, and pagination windows; added composite indexes and cold‑start pre‑warmers.</li>
+            <li><b>Variant media fan‑out</b> → Moved media metadata to separate collection + CDN; lazy‑loaded thumbnails.</li>
+            <li><b>Reseller‑specific pricing</b> → Pricing rules engine with tiered overrides, computed at write via workers (RabbitMQ) to keep reads O(1).</li>
+          </ul>
+          <h4>Measurable Value</h4>
+          <ul>
+            <li>Product list P95 render time ↓ significantly (add your metric, e.g., <i>2.8s → 0.9s</i>).</li>
+            <li>Throughput ↑ under peak sync (e.g., <i>+3×</i>) after queue‑based ingestion.</li>
+            <li>Infra cost optimized via cache hit‑rate improvements (add %).</li>
+          </ul>
+        </section>
+        <aside class="section">
+          <h4>My Contribution</h4>
+          <ul>
+            <li>Architected data model & indexing strategy; led refactor of slow queries.</li>
+            <li>Implemented RabbitMQ workers for pricing/materialized views.</li>
+            <li>Mentored team of N engineers; code reviews, deployment runbooks.</li>
+          </ul>
+          <h4>Technical Skills Used</h4>
+          <ul>
+            <li>CodeIgniter, Node.js (workers), MySQL, MongoDB, Redis, RabbitMQ, AWS (EC2/S3/CloudFront)</li>
+          </ul>
+          <h4>Future Enhancements</h4>
+          <ul>
+            <li>Search service with OpenSearch for typo‑tolerance & facets.</li>
+            <li>ABAC for reseller permissions; feature flags for rollouts.</li>
+          </ul>
+          <div class="section">
+            <h4>Quick Project Summary</h4>
+            <p>Scaled a complex drop‑shipping workflow while keeping reads fast and operations predictable.</p>
+          </div>
+        </aside>
+      </div>
+    </article>
+
+    <!-- Project 2: Brain Tuner Game (React) -->
+    <article class="card" data-open>
+      <h3>Brain Tuner — React Mental Math Game</h3>
+      <div class="meta">
+        <span class="chip">Role: Full‑stack Developer</span>
+        <span class="chip">Stack: React · JavaScript</span>
+        <span class="pill ok">Live Demo</span>
+      </div>
+      <div class="split">
+        <section class="section">
+          <h4>Project Overview</h4>
+          <p>Lightweight browser game with a timer and 10 one‑digit addition/subtraction questions. Tracks accuracy and time to complete.</p>
+          <h4>Key Challenges & Solutions</h4>
+          <ul>
+            <li><b>Consistent timing</b> → Isolated timer state and cleanup with <code>useEffect</code> to avoid drift.</li>
+            <li><b>UX feedback</b> → Inline validation & immediate next‑question generation on correct answers.</li>
+          </ul>
+          <h4>Measurable Value</h4>
+          <ul>
+            <li>First‑contentful‑play in ~sub‑second on average devices.</li>
+            <li>Zero dependencies beyond React; minimal bundle size.</li>
+          </ul>
+        </section>
+        <aside class="section">
+          <h4>My Contribution</h4>
+          <ul>
+            <li>Implemented question generator, timer, and score logic end‑to‑end.</li>
+            <li>Wrote clean, testable components and styles.</li>
+          </ul>
+          <h4>Technical Skills Used</h4>
+          <ul>
+            <li>React hooks, component state management, DOM events</li>
+          </ul>
+          <h4>Future Enhancements</h4>
+          <ul>
+            <li>Levels, leaderboards, and PWA offline support.</li>
+          </ul>
+          <div class="section"><h4>Quick Project Summary</h4><p>Small, focused game showcasing clean React patterns.</p></div>
+        </aside>
+      </div>
+    </article>
+
+    <!-- Project 3: Multi‑Tenant SaaS (Laravel) -->
+    <article class="card" data-open>
+      <h3>Multi‑Tenant Platform — Laravel</h3>
+      <div class="meta">
+        <span class="chip">Role: Solution Architect</span>
+        <span class="chip">Stack: Laravel · MySQL · Redis · AWS</span>
+        <span class="pill warn">In Progress</span>
+      </div>
+      <div class="split">
+        <section class="section">
+          <h4>Project Overview</h4>
+          <p>Designed a scalable multi‑tenant architecture with isolated data per tenant, shared application layer, and centralized observability.</p>
+          <h4>Key Challenges & Solutions</h4>
+          <ul>
+            <li><b>Tenant isolation</b> → Schema‑per‑tenant + connection resolver; strict tenancy middleware.</li>
+            <li><b>Migrations at scale</b> → Migration runner with retries and back‑pressure; blue/green rollouts.</li>
+          </ul>
+          <h4>Measurable Value</h4>
+          <ul>
+            <li>Cold tenant provisioning in &lt; 60s (target).</li>
+            <li>Error budget tracked via SLOs; automated alerts.</li>
+          </ul>
+        </section>
+        <aside class="section">
+          <h4>My Contribution</h4>
+          <ul>
+            <li>Architecture docs, database strategy, CICD pipeline templates.</li>
+          </ul>
+          <h4>Technical Skills Used</h4>
+          <ul>
+            <li>Laravel, tenancy patterns, Redis caching, IaC</li>
+          </ul>
+          <h4>Future Enhancements</h4>
+          <ul>
+            <li>Feature segmentation per tenant; usage‑based billing.</li>
+          </ul>
+          <div class="section"><h4>Quick Project Summary</h4><p>Foundation for a robust SaaS with clear tenancy boundaries.</p></div>
+        </aside>
+      </div>
+    </article>
+
+    <!-- Project 4: India Tours & Towns (Node/Express/Mongo/EJS) -->
+    <article class="card" data-open>
+      <h3>India Tours & Towns — Content & Listing Site</h3>
+      <div class="meta">
+        <span class="chip">Role: Backend Lead</span>
+        <span class="chip">Stack: Node.js · Express · EJS · MongoDB</span>
+        <span class="pill ok">Production</span>
+      </div>
+      <div class="split">
+        <section class="section">
+          <h4>Project Overview</h4>
+          <p>City & town directory with details like pincode, history, foods, and travel information, optimized for SEO and fast reads.</p>
+          <h4>Key Challenges & Solutions</h4>
+          <ul>
+            <li><b>Searchable content</b> → Text indexes with n‑gram analyzers; slug strategy for clean URLs.</li>
+            <li><b>Editorial workflow</b> → Admin panel with roles and draft → publish flow.</li>
+          </ul>
+          <h4>Measurable Value</h4>
+          <ul>
+            <li>Organic traffic growth (add %); TTFB reduction via caching.</li>
+          </ul>
+        </section>
+        <aside class="section">
+          <h4>My Contribution</h4>
+          <ul>
+            <li>API design, schema modeling, SSR templates, caching strategy.</li>
+          </ul>
+          <h4>Technical Skills Used</h4>
+          <ul>
+            <li>Express routing, MongoDB schema design, EJS SSR</li>
+          </ul>
+          <h4>Future Enhancements</h4>
+          <ul>
+            <li>Static generation for hotspots; map overlays.</li>
+          </ul>
+          <div class="section"><h4>Quick Project Summary</h4><p>Fast, SEO‑friendly travel content portal.</p></div>
+        </aside>
+      </div>
+    </article>
+
+    <!-- Project 5: Pincode Manager (Node) -->
+    <article class="card" data-open>
+      <h3>Pincode Manager — Bulk Import & Validation</h3>
+      <div class="meta">
+        <span class="chip">Role: Senior Developer</span>
+        <span class="chip">Stack: Node.js · Express · CSV/XLS parsing · MongoDB</span>
+        <span class="pill ok">Internal Tool</span>
+      </div>
+      <div class="split">
+        <section class="section">
+          <h4>Project Overview</h4>
+          <p>Bulk add and maintain pincodes with CSV/XLS ingestion, dedupe rules, and audit trails.</p>
+          <h4>Key Challenges & Solutions</h4>
+          <ul>
+            <li><b>Messy source files</b> → Stream parsers with schema validation; quarantined error bucket.</li>
+            <li><b>Data quality</b> → Checksums & referential integrity against master datasets.</li>
+          </ul>
+          <h4>Measurable Value</h4>
+          <ul>
+            <li>Import time reduced from manual hours to minutes; error rate markedly lower.</li>
+          </ul>
+        </section>
+        <aside class="section">
+          <h4>My Contribution</h4>
+          <ul>
+            <li>Designed pipeline; implemented validators and admin UI.</li>
+          </ul>
+          <h4>Technical Skills Used</h4>
+          <ul>
+            <li>Stream processing, validation, indexing</li>
+          </ul>
+          <h4>Future Enhancements</h4>
+          <ul>
+            <li>Webhook to sync downstream services; role‑based access.</li>
+          </ul>
+          <div class="section"><h4>Quick Project Summary</h4><p>Reliable ingestion with guardrails for data correctness.</p></div>
+        </aside>
+      </div>
+    </article>
+
+    <!-- Project 6: Post Office System (MEN stack) -->
+    <article class="card" data-open>
+      <h3>Post Office System — Tracking & Operations</h3>
+      <div class="meta">
+        <span class="chip">Role: Technical Lead</span>
+        <span class="chip">Stack: Node.js · Express · MongoDB</span>
+        <span class="pill warn">Pilot</span>
+      </div>
+      <div class="split">
+        <section class="section">
+          <h4>Project Overview</h4>
+          <p>Operational tool for parcel lifecycle tracking, from intake to delivery, with SLA monitoring.</p>
+          <h4>Key Challenges & Solutions</h4>
+          <ul>
+            <li><b>Event consistency</b> → Append‑only event log; derived read models for dashboards.</li>
+            <li><b>SLA reporting</b> → Aggregations and scheduled snapshots for time‑series charts.</li>
+          </ul>
+          <h4>Measurable Value</h4>
+          <ul>
+            <li>Improved delivery visibility; SLA breach alerts before cutoff.</li>
+          </ul>
+        </section>
+        <aside class="section">
+          <h4>My Contribution</h4>
+          <ul>
+            <li>Defined event model; implemented APIs and metrics collectors.</li>
+          </ul>
+          <h4>Technical Skills Used</h4>
+          <ul>
+            <li>REST design, aggregation pipelines, background jobs</li>
+          </ul>
+          <h4>Future Enhancements</h4>
+          <ul>
+            <li>Role dashboards; mobile scanning app integration.</li>
+          </ul>
+          <div class="section"><h4>Quick Project Summary</h4><p>Event‑sourced operations with clear SLAs.</p></div>
+        </aside>
+      </div>
+    </article>
+
+    <!-- Project 7: Kanban Board (Express/EJS) -->
+    <article class="card" data-open>
+      <h3>Kanban Board — Lightweight Tasking</h3>
+      <div class="meta">
+        <span class="chip">Role: Developer</span>
+        <span class="chip">Stack: Node.js · Express · EJS · MongoDB</span>
+        <span class="pill ok">Internal</span>
+      </div>
+      <div class="split">
+        <section class="section">
+          <h4>Project Overview</h4>
+          <p>Simple Kanban for personal/team tasks with boards, columns, and WIP limits.</p>
+          <h4>Key Challenges & Solutions</h4>
+          <ul>
+            <li><b>State consistency</b> → Atomic moves with optimistic UI and rollback.</li>
+          </ul>
+          <h4>Measurable Value</h4>
+          <ul>
+            <li>Cycle time visibility; fewer stuck tickets.</li>
+          </ul>
+        </section>
+        <aside class="section">
+          <h4>My Contribution</h4>
+          <ul>
+            <li>CRUD APIs, EJS views, drag‑drop interactions.</li>
+          </ul>
+          <h4>Technical Skills Used</h4>
+          <ul>
+            <li>MVC patterns, session/auth basics, Mongo indices</li>
+          </ul>
+          <h4>Future Enhancements</h4>
+          <ul>
+            <li>Webhook integrations; analytics panel.</li>
+          </ul>
+          <div class="section"><h4>Quick Project Summary</h4><p>Productive starter for team tasking.</p></div>
+        </aside>
+      </div>
+    </article>
+
+    <footer>
+      Tip: Replace placeholder metrics with your real numbers (P95 latency, % improvements, throughput). Keep bullets action‑oriented and outcomes measurable.
+    </footer>
+  </div>
+
+  <script>
+    function toggleAll(){
+      const cards=[...document.querySelectorAll('.card')];
+      const anyClosed=cards.some(c=>!c.hasAttribute('data-open'));
+      cards.forEach(c=> anyClosed ? c.setAttribute('data-open','') : c.removeAttribute('data-open'))
+    }
+  </script>
+</body>
+</html>
