@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ship.nimbuspost.com — Courier Aggregator</title>
+
+  <style>
+    /* Simple, clean styling inspired by the reference page */
+    :root{
+      --bg:#fff;
+      --accent:#222;
+      --muted:#666;
+      --card:#f8f9fb;
+      --accent-2:#c62828;
+      --container:1100px;
+      font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#ffffff 0%, #fbfbfd 100%);
+      color:var(--accent);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+      display:flex;
+      justify-content:center;
+    }
+    .wrap{
+      width:100%;
+      max-width:var(--container);
+    }
+
+    header{
+      display:flex;
+      align-items:baseline;
+      gap:18px;
+      margin-bottom:18px;
+    }
+    .brand{
+      font-weight:700;
+      font-size:18px;
+      color:var(--accent);
+      letter-spacing:1px;
+    }
+    .title{
+      font-size:28px;
+      margin:0;
+      line-height:1.05;
+    }
+    .subtitle{
+      margin-top:6px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .badges{
+      margin:18px 0 26px;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .badge{
+      background:var(--card);
+      padding:8px 12px;
+      border-radius:8px;
+      font-size:13px;
+      color:var(--muted);
+      box-shadow:0 1px 0 rgba(0,0,0,0.02);
+    }
+
+    .section{
+      margin:22px 0;
+      background:transparent;
+    }
+    h2{margin:0 0 10px 0;font-size:18px}
+    p{color:var(--muted);line-height:1.6;margin:0 0 12px 0}
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:start;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:8px;
+      padding:18px;
+      box-shadow:0 6px 20px rgba(12,18,30,0.04);
+    }
+
+    .skill-list{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:8px;
+    }
+    .skill{background:var(--card);padding:8px 10px;border-radius:6px;font-weight:600;font-size:13px;color:var(--muted);}
+
+    .metrics{
+      display:flex;
+      gap:16px;
+      margin-top:12px;
+      flex-wrap:wrap;
+    }
+    .metric{
+      background:linear-gradient(180deg,#ffffff,#fbfbfd);
+      padding:14px;
+      border-radius:8px;
+      min-width:120px;
+      text-align:center;
+      box-shadow:0 2px 8px rgba(0,0,0,0.03);
+    }
+    .metric h3{margin:0;font-size:20px;color:var(--accent);}
+    .metric p{margin:6px 0 0 0;color:var(--muted);font-size:13px}
+
+    pre.code{
+      background:#0f1724;color:#d6f8ff;padding:12px;border-radius:8px;overflow:auto;font-size:13px;line-height:1.5;
+    }
+
+    footer{
+      margin-top:30px;color:var(--muted);font-size:13px;text-align:center;
+    }
+
+    @media (max-width:980px){
+      .grid{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:6px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="brand">NIMBUSPOST</div>
+      <div>
+        <h1 class="title">ship.nimbuspost.com — Courier Aggregator</h1>
+        <div class="subtitle">Fast, affordable shipping & dropship operations — seller onboarding, multi-courier routing, tracking and wallet management.</div>
+      </div>
+    </header>
+
+    <div class="badges">
+      <div class="badge">PHP • CodeIgniter • MySQL</div>
+      <div class="badge">Node.js • MongoDB • RabbitMQ</div>
+      <div class="badge">Courier APIs • Real-time Tracking</div>
+      <div class="badge">Payments & Wallets</div>
+    </div>
+
+    <div class="grid">
+      <!-- Left column: main content -->
+      <div>
+        <section class="card section">
+          <h2>Project Overview</h2>
+          <p>
+            <strong>NimbusPost</strong> is a premier courier aggregator and dropshipping solutions provider in India, focused on fast, affordable delivery services for e-commerce. ship.nimbuspost.com integrates multiple courier partners and automates shipment workflows to help sellers scale fulfillment across India and globally.
+          </p>
+          <p>
+            The platform divides responsibilities across technologies: <strong>PHP + MySQL</strong> power seller-level operations, order and wallet management, while <strong>Node.js + MongoDB</strong> microservices handle courier API interactions, real-time updates and message-driven processing via RabbitMQ.
+          </p>
+        </section>
+
+        <section class="card section">
+          <h2>Role Overview — Team Lead</h2>
+          <p>
+            As Team Lead I oversaw a cross-functional development team, drove end-to-end project execution, maintained critical integrations with courier partners, and owned technical maintenance and architecture for our shipping and dropship products.
+          </p>
+
+          <h3 style="margin-top:12px">Key Responsibilities</h3>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li>Spearheaded backend development to ensure scalability, reliability and high throughput across logistics workflows.</li>
+            <li>Led developers through sprint planning, code reviews, and release coordination.</li>
+            <li>Designed microservice boundaries: seller ops (PHP/MySQL) vs courier API handling (Node.js/MongoDB).</li>
+            <li>Implemented RabbitMQ for asynchronous jobs: shipment events, retries, and bulk processing.</li>
+            <li>Managed system maintenance, security hardening, and SLAs for courier integrations.</li>
+          </ul>
+        </section>
+
+        <section class="card section">
+          <h2>Important Modules</h2>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li><strong>Seller Registration</strong> — streamlined onboarding, KYC handling and seller dashboards.</li>
+            <li><strong>Weight Management</strong> — volumetric calculations, reconciliation with courier weight rules.</li>
+            <li><strong>Shipment Process</strong> — single & bulk orders, label generation, courier selection logic.</li>
+            <li><strong>Shipment Tracking</strong> — aggregated tracking from multiple couriers with webhooks and polling fallbacks.</li>
+            <li><strong>Customer Chatbot</strong> — automated queries for shipment status and self-service actions.</li>
+            <li><strong>NDR Handling</strong> — Non-Delivery workflows, automated retries and resolution flows.</li>
+            <li><strong>Payment Gateway</strong> — secure settlements, COD reconciliation, refunds.</li>
+            <li><strong>Wallet Management</strong> — seller wallets, ledger entries, top-up and settlement flows.</li>
+          </ul>
+        </section>
+
+        <section class="card section">
+          <h2>Key Achievements & Impact</h2>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li>Delivered a multi-courier integration layer providing consistent tracking and SLA handling across partners.</li>
+            <li>Reduced manual reconciliation time through automated weight & NDR workflows.</li>
+            <li>Implemented queue-based retry and exponential backoff, cutting PI sync failures dramatically.</li>
+            <li>Designed wallet & payment flows to support prepaid and postpaid models with per-seller ledgers.</li>
+          </ul>
+        </section>
+
+        <section class="card section">
+          <h2>Representative Code Concept</h2>
+          <pre class="code">
+/* Example: reconcile latest courier events for a shipment (conceptual)
+db.courier_events.aggregate([
+  { $match: { shipment_id: "...", processed: { $ne: true } } },
+  { $sort:  { shipment_id:1, timestamp:-1 } },
+  { $group: {
+      _id: "$shipment_id",
+      latest_event: { $first: "$event" },
+      last_ts: { $first: "$timestamp" }
+  }},
+  { $project: { shipment_id: "$_id", latest_event:1, last_ts:1 } }
+]);
+          </pre>
+        </section>
+
+        <section class="card section">
+          <h2>Future Enhancements</h2>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li>Move heavy aggregations to optimized MongoDB pipelines and add targeted indexes for scale.</li>
+            <li>Real-time notifications using WebSocket / Reverb-like managed WebSocket servers.</li>
+            <li>Role-based dashboards and approval workflows for sensitive PI sync operations.</li>
+            <li>Stronger observability with distributed tracing and SLA-based alerts.</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Right column: sidebar -->
+      <aside>
+        <div class="card">
+          <h2>Technical Skills Used</h2>
+          <div class="skill-list">
+            <div class="skill">PHP</div>
+            <div class="skill">CodeIgniter</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">MongoDB</div>
+            <div class="skill">RabbitMQ</div>
+            <div class="skill">REST & Webhooks</div>
+            <div class="skill">Payments</div>
+          </div>
+
+          <h2 style="margin-top:18px">Measurable Results</h2>
+          <div class="metrics">
+            <div class="metric">
+              <h3>~60%</h3>
+              <p>Reduction in manual reconciliation time</p>
+            </div>
+            <div class="metric">
+              <h3>~80%</h3>
+              <p>Reduction in PI sync failures</p>
+            </div>
+            <div class="metric">
+              <h3>&lt; 2s</h3>
+              <p>Average export time (≤ 500 items)</p>
+            </div>
+          </div>
+
+          <h2 style="margin-top:18px">How I contributed</h2>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li>Backend architecture and implementation</li>
+            <li>Microservice boundaries (PHP ↔ Node.js)</li>
+            <li>Queue strategy (RabbitMQ) and job reliability</li>
+            <li>Payment & wallet design</li>
+            <li>Courier integrations and tracking orchestration</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:16px;">
+          <h2>Contact / Next Steps</h2>
+          <p style="margin-bottom:6px">Want this packaged as a PDF or a short case-deck?</p>
+          <p style="margin:0.2rem 0 0"><strong>Email:</strong> jha.ameet@gmail.com</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © ship.nimbuspost.com — Project Summary • Team Lead: [Your Name]
+    </footer>
+  </div>
+</body>
+</html>
