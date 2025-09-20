@@ -3,200 +3,162 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dropship — Project Portfolio</title>
+  <title>SourceInfi — Dropshipping Platform (Shifto Pvt Ltd)</title>
   <style>
-    :root{
-      --bg:#f5f7fb;
-      --card:#ffffff;
-      --muted:#6b7280;
-      --accent:#0f4c81;
-      --accent-2:#2b7abf;
-      --glass: rgba(15,76,129,0.06);
-      --mono: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    }
-    body{
-      font-family:var(--mono);
-      margin:0;
-      background:linear-gradient(180deg, var(--bg), #eef4fb 140%);
-      color:#0b1220;
-      padding:28px;
-    }
-    .container { max-width:1100px; margin:0 auto; }
-    header { display:flex; gap:16px; align-items:center; margin-bottom:20px; }
-    .logo { width:72px; height:72px; border-radius:10px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:18px; }
-    h1 { margin:0; font-size:22px; }
-    .lead { color:var(--muted); margin-top:6px; font-size:14px; }
-
-    .card { background:var(--card); border-radius:12px; padding:18px; box-shadow:0 8px 20px rgba(11,18,32,0.05); }
-
-    .grid { display:grid; grid-template-columns:1fr 320px; gap:18px; align-items:start; }
-
-    h2 { color:var(--accent); font-size:16px; margin:0 0 8px; }
-    p { color:#172033; margin:0 0 10px; }
-
-    ul.skills { list-style:none; padding:0; display:flex; gap:8px; flex-wrap:wrap; margin:0 0 10px; }
-    ul.skills li { background:#f3f8ff; padding:6px 8px; border-radius:8px; color:var(--accent-2); font-weight:600; font-size:13px; }
-
-    .metrics { display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
-    .metric { padding:12px; background:linear-gradient(180deg,#fff,#fbfdff); border-radius:10px; min-width:150px; }
-    .metric .val { color:var(--accent); font-weight:700; font-size:18px; }
-    .metric .label { color:var(--muted); font-size:12px; margin-top:6px; }
-
-    .skills-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; margin-top:12px; }
-    .skill { background:#f8fbff; padding:10px; border-radius:8px; font-weight:700; color:#123a5a; font-size:13px; }
-
-    .right .card + .card { margin-top:12px; }
-    pre.code { background:#0b1220; color:#e6eefc; padding:12px; border-radius:8px; overflow:auto; font-family:monospace; font-size:13px; }
-
-    .btn {
-      display:inline-block;
-      padding:8px 12px;
-      background:var(--accent);
-      color:#fff;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:700;
-      border:0;
-      cursor:pointer;
-    }
-    .btn.secondary { background:#f3f8ff; color:var(--accent-2); border:1px solid rgba(15,76,129,0.08); }
-    .back-wrap { margin-bottom:12px; }
-
-    @media (max-width:980px){ .grid{grid-template-columns:1fr} .right{order:2} }
+    :root{--bg:#fff;--accent:#111;--muted:#6b7280;--card:#f8f9fb;--container:1100px;--accent-2:#0ea5a4;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif}
+    html,body{height:100%}
+    body{margin:0;background:linear-gradient(180deg,#ffffff 0%, #fbfdfe 100%);color:var(--accent);-webkit-font-smoothing:antialiased;padding:40px 20px;display:flex;justify-content:center}
+    .wrap{width:100%;max-width:var(--container)}
+    header{display:flex;align-items:center;gap:18px;margin-bottom:18px}
+    .logo{width:84px;height:84px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(12,18,30,0.06);overflow:hidden}
+    .logo img{max-width:72px;max-height:72px}
+    .brand{font-weight:800;font-size:18px;color:var(--accent);letter-spacing:1px}
+    .title{font-size:28px;margin:0;line-height:1.05}
+    .subtitle{margin-top:6px;color:var(--muted);font-size:14px}
+    .badges{margin:18px 0 26px;display:flex;gap:14px;flex-wrap:wrap}
+    .badge{background:var(--card);padding:8px 12px;border-radius:8px;font-size:13px;color:var(--muted);box-shadow:0 1px 0 rgba(0,0,0,0.02)}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+    .card{background:#fff;border-radius:8px;padding:18px;box-shadow:0 6px 20px rgba(12,18,30,0.04)}
+    h2{margin:0 0 10px 0;font-size:18px}
+    p{color:var(--muted);line-height:1.6;margin:0 0 12px 0}
+    .skill-list{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .skill{background:var(--card);padding:8px 10px;border-radius:6px;font-weight:600;font-size:13px;color:var(--muted)}
+    .metrics{display:flex;gap:16px;margin-top:12px;flex-wrap:wrap}
+    .metric{background:linear-gradient(180deg,#ffffff,#fbfbfd);padding:14px;border-radius:8px;min-width:120px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.03)}
+    .metric h3{margin:0;font-size:20px;color:var(--accent)}
+    .metric p{margin:6px 0 0 0;color:var(--muted);font-size:13px}
+    pre.code{background:#0b1220;color:#d6f8ff;padding:12px;border-radius:8px;overflow:auto;font-size:13px;line-height:1.5}
+    footer{margin-top:30px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:980px){.grid{grid-template-columns:1fr}header{flex-direction:row;align-items:center}}
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="back-wrap">
-      <button class="btn secondary" onclick="history.back()">← Back</button>
-    </div>
-
+  <div class="wrap">
     <header>
-      <div class="logo">DSH</div>
+      <div class="logo">
+        <!-- Replace the src with your SourceInfi logo path -->
+        <img src="assets/sourceinfi-logo.png" alt="SourceInfi logo" />
+      </div>
       <div>
-        <h1>Dropship — Project Portfolio</h1>
-        <div class="lead">End-to-end drop-shipping order & shipment management — inventory reconciliation, supplier sync & export-ready PI documentation.</div>
-        <div style="margin-top:8px;">
-          <span style="display:inline-block;background:var(--glass);padding:6px 8px;border-radius:8px;color:var(--accent);font-weight:600;margin-right:6px;">Laravel</span>
-          <span style="display:inline-block;background:var(--glass);padding:6px 8px;border-radius:8px;color:var(--accent);font-weight:600;">MongoDB</span>
-        </div>
+        <div class="brand">SHIFTO PVT LTD</div>
+        <h1 class="title">SourceInfi — E-commerce Dropshipping Platform</h1>
+        <div class="subtitle">Streamlined dropshipping operations: catalog, Shopify sync, pincode servicing, shipments, and seller wallets.</div>
       </div>
     </header>
 
+    <div class="badges">
+      <div class="badge">PHP • CodeIgniter • MySQL</div>
+      <div class="badge">Node.js • TypeScript • MongoDB</div>
+      <div class="badge">RabbitMQ • AWS</div>
+      <div class="badge">Shopify App • Courier Integrations</div>
+    </div>
+
     <div class="grid">
       <main>
-        <div class="card">
+        <section class="card">
           <h2>Project Overview</h2>
-          <p>
-            <strong>Dropship</strong> is a procurement & fulfillment platform enabling merchants to route orders to suppliers, track shipments at box-level, and reconcile receipts with GRNs. The platform produces business-ready PI/Shipment exports and automates catalog & PI syncs to reduce manual work.
-          </p>
+          <p><strong>SourceInfi</strong> (by Shifto Pvt Ltd) is a dropshipping and e-commerce platform designed to simplify product listing, pricing, and order management for sellers. The platform connects sellers to marketplaces, provides fast Shopify integrations, and links multiple courier partners for seamless fulfillment.</p>
+          <p>Responsibilities are split across technologies: seller and transactional logic runs on <strong>PHP + MySQL</strong>, while courier API orchestration and real-time event handling run on <strong>Node.js + MongoDB</strong>. RabbitMQ orchestrates asynchronous jobs and retries; AWS hosts infrastructure and storage.</p>
+        </section>
 
-          <h2 style="margin-top:16px">My Role</h2>
-          <p>
-            Sole developer — responsible for requirements analysis, system architecture, UI design, backend development (Laravel), job/observer-based sync automation, and export formatting. Led manual QA and supported initial production rollout.
-          </p>
+        <section class="card" style="margin-top:18px">
+          <h2>Role — Technical Lead</h2>
+          <p>As Technical Lead, I guided development, drove platform enhancements, ensured stability at scale, and led the engineering team to deliver high-quality features aligned with product goals.</p>
 
-          <h2 style="margin-top:16px">Key Challenges & Solutions</h2>
-          <h3 style="font-size:14px;margin-top:8px">1. Multi-box reconciliation</h3>
-          <p>Refactored payload generation to compute latest-GRN-per-box and emit per-box rows plus a single "remaining" row per product. Eliminated duplicated "new" rows in exports.</p>
-
-          <h3 style="font-size:14px;margin-top:8px">2. Cross-collection filters with correct pagination</h3>
-          <p>Precomputed PO ID and catalog ID filters and applied them before paginating to ensure page results matched global filters.</p>
-
-          <h3 style="font-size:14px;margin-top:8px">3. Robust external syncs</h3>
-          <p>Implemented observer → queued job flow for catalog and PI syncs (switchable from sync to async driver). Added retries and detailed logs for failure diagnosis.</p>
-        </div>
-
-        <div class="card" style="margin-top:14px;">
-          <h2>Technical Skills Used</h2>
-          <div class="skills-grid">
-            <div class="skill">PHP / Laravel</div>
-            <div class="skill">MongoDB (aggregations)</div>
-            <div class="skill">Maatwebsite/Excel</div>
-            <div class="skill">Queues & Jobs</div>
-            <div class="skill">Blade + JS (Fetch)</div>
-            <div class="skill">AWS S3</div>
-            <div class="skill">Logging & Monitoring</div>
-            <div class="skill">Git / Composer</div>
-          </div>
-
-          <h2 style="margin-top:12px;">Measurable Results</h2>
-          <div class="metrics">
-            <div class="metric">
-              <div class="val">~60%</div>
-              <div class="label">Reduction in manual reconciliation time</div>
-            </div>
-            <div class="metric">
-              <div class="val">~80%</div>
-              <div class="label">Drop in PI sync failures</div>
-            </div>
-            <div class="metric">
-              <div class="val">&lt; 2s</div>
-              <div class="label">Average XLSX export (≤500 boxes)</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="margin-top:14px;">
-          <h2>Future Enhancements</h2>
-          <ul>
-            <li>Audit trail + approval workflow for PI syncing.</li>
-            <li>Real-time notifications via websockets for critical status changes.</li>
-            <li>Move heavy queries to MongoDB aggregation pipelines and add indexes for scale.</li>
-            <li>Automated test suites for reconciliation and export logic.</li>
+          <h3 style="margin-top:12px">Core Responsibilities</h3>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li>Led full-stack development and platform enhancements (PHP/CodeIgniter and Node.js microservices).</li>
+            <li>Managed developer team: sprint planning, code reviews, mentoring and delivery.</li>
+            <li>Monitored performance, diagnosed bottlenecks, and implemented scalable solutions on AWS.</li>
+            <li>Debugged production issues, stabilized integrations with courier partners and Shopify.</li>
           </ul>
-        </div>
+        </section>
+
+        <section class="card" style="margin-top:18px">
+          <h2>Key Modules</h2>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li><strong>Seller & Vendor Registration</strong> — KYC, onboarding, and multi-tenant seller profiles.</li>
+            <li><strong>Catalog Management</strong> — product listings, images, variant mapping, and pricing rules.</li>
+            <li><strong>Shopify App Integration</strong> — fast product & order sync, webhook handling, app auth.</li>
+            <li><strong>Pincode Management</strong> — serviceability and delivery SLAs per pincode.</li>
+            <li><strong>Shipment Process</strong> — label generation, courier selection, and batch processing.</li>
+            <li><strong>Shipment Tracking</strong> — aggregated courier status, webhooks, and fallback polling.</li>
+            <li><strong>NDR Handling</strong> — automated non-delivery workflows and rescheduling.</li>
+            <li><strong>Wallet & Margin Management</strong> — seller wallets, margin calculations, and settlement flows.</li>
+          </ul>
+        </section>
+
+        <section class="card" style="margin-top:18px">
+          <h2>Technical Highlights</h2>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li>Hybrid architecture: monolithic PHP for seller ops and performant Node.js microservices for courier orchestration.</li>
+            <li>Event-driven processing with RabbitMQ for retries and throughput resilience.</li>
+            <li>Shopify app that supports OAuth flows, webhooks and bulk sync.</li>
+            <li>Optimized MySQL schemas for catalog and wallet ledgers; MongoDB for courier events and fast lookups.</li>
+            <li>Infrastructure on AWS with autoscaling, S3 for assets, and CloudWatch for monitoring.</li>
+          </ul>
+        </section>
+
+        <section class="card" style="margin-top:18px">
+          <h2>Representative Code Concept</h2>
+          <pre class="code">// Concept: enqueue shipment for courier assignment
+const payload = { orderId, items, weight, pincode };
+rabbitmqChannel.sendToQueue('shipments', Buffer.from(JSON.stringify(payload)), { persistent: true });
+
+// Worker picks job, calls courier microservice and writes events to MongoDB
+// (conceptual snippet)</pre>
+        </section>
+
+        <section class="card" style="margin-top:18px">
+          <h2>Impact & Outcomes</h2>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li>Accelerated Shopify onboarding and reduced sync time from hours to minutes.</li>
+            <li>Improved delivery SLA compliance via smarter courier selection and pincode routing.</li>
+            <li>Reduced failed shipment retries with better exponential backoff and idempotent workers.</li>
+          </ul>
+        </section>
       </main>
 
-      <aside class="right">
+      <aside>
         <div class="card">
-          <h3>Quick Summary</h3>
-          <p><strong>Dropship</strong> — procurement and fulfillment orchestration platform for drop-shipping merchants.</p>
-          <p><strong>Stack:</strong> Laravel • MongoDB • Maatwebsite Excel</p>
-        </div>
+          <h2>Tech Stack</h2>
+          <div class="skill-list">
+            <div class="skill">PHP</div>
+            <div class="skill">CodeIgniter</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">TypeScript</div>
+            <div class="skill">MongoDB</div>
+            <div class="skill">RabbitMQ</div>
+            <div class="skill">AWS</div>
+          </div>
 
-        <div class="card">
-          <h3>Representative Snippet</h3>
-          <pre class="code">
-/* Latest GRN per box (conceptual)
-db.grn.aggregate([
-  { $match: { purchase_order_id: "..." } },
-  { $sort: { box_id: 1, modified: -1 } },
-  { $group: {
-      _id: "$box_id",
-      latest_received: { $first: "$received_count" }
-  }},
-  { $group: {
-      _id: null,
-      totalReceived: { $sum: "$latest_received" }
-  }}
-]);
-          </pre>
-        </div>
+          <h2 style="margin-top:18px">Key Metrics</h2>
+          <div class="metrics">
+            <div class="metric"><h3>~99%</h3><p>Ensured near-continuous system uptime</p></div>
+            <div class="metric"><h3>~40%</h3><p>Faster and 0% Failure Shopify sync by using shopify app</p></div>
+            <div class="metric"><h3>~70%</h3><p>Reduction in failed courier callbacks using pincode handling with courier</p></div>
+            <div class="metric"><h3>&lt;3s</h3><p>Average API response (courier microservices)</p></div>
+          </div>
 
-        <div class="card">
-          <h3>Contribution</h3>
-          <p><strong>Sole developer:</strong></p>
-          <ul>
-            <li>End-to-end delivery: analysis → design → build → QA.</li>
-            <li>Implemented core reconciliation & export logic.</li>
-            <li>Built observer-job based syncs for reliability.</li>
+          <h2 style="margin-top:18px">Responsibilities</h2>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li>Platform architecture & delivery</li>
+            <li>Team leadership & mentoring</li>
+            <li>Integration with marketplaces and couriers</li>
+            <li>Performance tuning and incident response</li>
           </ul>
         </div>
 
-        <div class="card">
-          <h3>Next Steps</h3>
-          <p class="muted">Want this as PDF or a short slide deck?</p>
-          <div style="margin-top:8px;">
-            <a href="#" class="btn" onclick="alert('Please provide screenshots or metrics to include in the PDF/slide deck.')">Request PDF</a>
-          </div>
+        <div class="card" style="margin-top:16px">
+          <h2>Contact</h2>
+          <p>Want a PDF or case deck?</p>
+          <p style="margin:0.2rem 0 0"><strong>Email:</strong> jha.ameet@gmail.com</p>
         </div>
       </aside>
     </div>
 
-    <footer style="text-align:center;margin-top:16px;color:var(--muted);font-size:13px;">
-      © Dropship — Project Portfolio
-    </footer>
+    <footer>© SourceInfi (Shifto Pvt Ltd) — Project Summary • Technical Lead</footer>
   </div>
 </body>
 </html>
