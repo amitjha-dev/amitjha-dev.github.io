@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>sourceinfi.com — Movers & Packers Aggregator</title>
+
+  <style>
+    :root{
+      --bg:#fff;
+      --accent:#0f1724;
+      --muted:#586070;
+      --card:#f6f8fa;
+      --accent-2:#1f6feb;
+      --container:1100px;
+      font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#ffffff 0%, #fbfdff 100%);
+      color:var(--accent);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+      display:flex;
+      justify-content:center;
+    }
+    .wrap{
+      width:100%;
+      max-width:var(--container);
+    }
+
+    header{
+      display:flex;
+      align-items:baseline;
+      gap:18px;
+      margin-bottom:18px;
+    }
+    .brand{
+      font-weight:800;
+      font-size:18px;
+      color:var(--accent-2);
+      letter-spacing:1px;
+    }
+    .title{
+      font-size:28px;
+      margin:0;
+      line-height:1.05;
+    }
+    .subtitle{
+      margin-top:6px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .badges{
+      margin:18px 0 26px;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .badge{
+      background:var(--card);
+      padding:8px 12px;
+      border-radius:8px;
+      font-size:13px;
+      color:var(--muted);
+      box-shadow:0 1px 0 rgba(0,0,0,0.02);
+    }
+
+    .section{
+      margin:22px 0;
+      background:transparent;
+    }
+    h2{margin:0 0 10px 0;font-size:18px}
+    p{color:var(--muted);line-height:1.6;margin:0 0 12px 0}
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:start;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:8px;
+      padding:18px;
+      box-shadow:0 6px 20px rgba(12,18,30,0.04);
+    }
+
+    .skill-list{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:8px;
+    }
+    .skill{background:var(--card);padding:8px 10px;border-radius:6px;font-weight:600;font-size:13px;color:var(--muted);}
+
+    .metrics{
+      display:flex;
+      gap:16px;
+      margin-top:12px;
+      flex-wrap:wrap;
+    }
+    .metric{
+      background:linear-gradient(180deg,#ffffff,#fbfbff);
+      padding:14px;
+      border-radius:8px;
+      min-width:120px;
+      text-align:center;
+      box-shadow:0 2px 8px rgba(0,0,0,0.03);
+    }
+    .metric h3{margin:0;font-size:20px;color:var(--accent-2);}
+    .metric p{margin:6px 0 0 0;color:var(--muted);font-size:13px}
+
+    pre.code{
+      background:#0f1724;color:#d6f8ff;padding:12px;border-radius:8px;overflow:auto;font-size:13px;line-height:1.5;
+    }
+
+    footer{
+      margin-top:30px;color:var(--muted);font-size:13px;text-align:center;
+    }
+
+    @media (max-width:980px){
+      .grid{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:6px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="brand">SOURCEINFI</div>
+      <div>
+        <h1 class="title">sourceinfi.com — Movers & Packers Integration Portal</h1>
+        <div class="subtitle">Aggregator for packers & movers — streamlined enquiries, bidding, vendor assignment and reporting powered by PHP & Laravel.</div>
+      </div>
+    </header>
+
+    <div class="badges">
+      <div class="badge">PHP 8 • Laravel 8 • MySQL 8</div>
+      <div class="badge">Order Capture • Bidding • Vendor Assignment</div>
+      <div class="badge">Webhooks • API Integrations</div>
+      <div class="badge">Call Center Workflow • Reporting</div>
+    </div>
+
+    <div class="grid">
+      <!-- Left column: main content -->
+      <div>
+        <section class="card section">
+          <h2>Project Overview</h2>
+          <p>
+            <strong>sourceinfi.com</strong> is a packers and movers aggregator built to simplify relocations. The platform captures enquiries from multiple sources, uses algorithmic and bidding logic to assign orders to vendors, and provides tools for call-centres, reporting and reconciliation.
+          </p>
+          <p>
+            Built with <strong>PHP 8</strong> and <strong>Laravel 8</strong> on <strong>MySQL 8</strong>, the portal focuses on reliability, quick vendor matching, and clear operational workflows that improve conversion rates and reduce manual overhead for operations teams.
+          </p>
+        </section>
+
+        <section class="card section">
+          <h2>Role Overview — Team Lead / Lead Developer</h2>
+          <p>
+            As the technical lead for the project I drove the architecture and development of the Movers & Packers Integration Portal, led module delivery, and coordinated with operations and support to ensure the platform met business SLAs and operational needs.
+          </p>
+
+          <h3 style="margin-top:12px">Key Responsibilities</h3>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li>Led requirement discussions with management to map business needs into a pragmatic technical roadmap.</li>
+            <li>Designed and implemented core modules using Laravel 8 and PHP 8 for scalability and maintainability.</li>
+            <li>Developed order capture pipelines that aggregate enquiries from websites, forms and partner feeds.</li>
+            <li>Implemented bidding & algorithmic vendor assignment to ensure cost-effective order routing.</li>
+            <li>Built calling management features to streamline call center operations and improve first-call resolutions.</li>
+            <li>Created reporting dashboards to surface performance metrics and vendor KPIs for management decisions.</li>
+            <li>Integrated APIs & webhooks for third-party tools to extend platform capabilities.</li>
+            <li>Set up proactive monitoring and collaborated with support & operations teams for continuous improvement.</li>
+          </ul>
+        </section>
+
+        <section class="card section">
+          <h2>Important Features / Modules</h2>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li><strong>Order Capturing:</strong> Centralized ingestion of leads and enquiries from multiple channels with de-duplication and routing rules.</li>
+            <li><strong>Item & Category Management:</strong> Structured item definitions to improve cost estimation and vendor quote accuracy.</li>
+            <li><strong>Bidding & Assignment Engine:</strong> Rule-based matching and vendor bidding to optimize cost and SLA.</li>
+            <li><strong>Calling Management:</strong> Agent workflows, click-to-call, call logs and outcomes tracking for better conversions.</li>
+            <li><strong>Reporting & Analytics:</strong> Dashboard for orders, vendor performance, revenue and operational metrics.</li>
+            <li><strong>Web Services:</strong> API & Webhook integrations for partners, payment gateway and external systems.</li>
+            <li><strong>Vendor Portal:</strong> Vendors receive leads, submit quotes, accept jobs and update statuses via a dedicated dashboard.</li>
+          </ul>
+        </section>
+
+        <section class="card section">
+          <h2>Representative Code / Design Concept</h2>
+          <pre class="code">
+/* Example: simplified vendor assignment pseudo-query (conceptual)
+SELECT v.id, v.score
+FROM vendors v
+JOIN vendor_coverage c ON c.vendor_id = v.id
+WHERE c.pincode = :pincode AND v.active = 1
+ORDER BY (dynamic_score) DESC
+LIMIT 5;
+-- dynamic_score computed from bids, SLA, reliability metrics
+          </pre>
+        </section>
+
+        <section class="card section">
+          <h2>Impact & Outcomes</h2>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li>Centralized enquiry handling reduced lead loss and improved vendor response times.</li>
+            <li>Bidding engine increased competitive pricing and lowered average fulfillment cost for customers.</li>
+            <li>Calling workflows and agent tooling improved first-contact closure rates and NPS.</li>
+            <li>Reporting enabled data-driven vendor management and SLA enforcement.</li>
+          </ul>
+        </section>
+
+        <section class="card section">
+          <h2>Future Enhancements</h2>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li>Introduce ML-based lead scoring to predict conversion probability and priority routing.</li>
+            <li>Add real-time vendor performance dashboards and SLAs with alerting.</li>
+            <li>Expose partner-facing APIs for bulk onboarding and two-way status sync.</li>
+            <li>Improve mobile-first vendor app and agent companion tools for field updates.</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Right column: sidebar -->
+      <aside>
+        <div class="card">
+          <h2>Technical Skills & Tools</h2>
+          <div class="skill-list">
+            <div class="skill">PHP 8</div>
+            <div class="skill">Laravel 8</div>
+            <div class="skill">MySQL 8</div>
+            <div class="skill">REST API</div>
+            <div class="skill">Webhook Integration</div>
+            <div class="skill">Monitoring</div>
+          </div>
+
+          <h2 style="margin-top:18px">Measurable Results</h2>
+          <div class="metrics">
+            <div class="metric">
+              <h3>~40%</h3>
+              <p>Improved lead-to-order conversion</p>
+            </div>
+            <div class="metric">
+              <h3>~30%</h3>
+              <p>Reduction in average fulfillment cost</p>
+            </div>
+            <div class="metric">
+              <h3>99.9%</h3>
+              <p>System uptime (SLA)</p>
+            </div>
+          </div>
+
+          <h2 style="margin-top:18px">My Contributions</h2>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li>Requirement analysis & solution design</li>
+            <li>Core module development (Laravel/PHP)</li>
+            <li>Bidding engine & vendor assignment logic</li>
+            <li>Reporting & integrations</li>
+            <li>Operations handover & support coordination</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:16px;">
+          <h2>Contact / Next Steps</h2>
+          <p style="margin-bottom:6px">Want this as a one-page PDF or a short case-deck?</p>
+          <p style="margin:0.2rem 0 0"><strong>Email:</strong> jha.ameet@gmail.com</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © sourceinfi.com — Movers & Packers Integration Portal • Team Lead: [Your Name]
+    </footer>
+  </div>
+</body>
+</html>
