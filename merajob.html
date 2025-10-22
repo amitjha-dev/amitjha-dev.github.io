@@ -1,119 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MeraJob Platform | Amit Jha - Project Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
-<body>
-  <section class="project">
-    <div class="container">
-      <h1>MeraJob Platform</h1>
-      <h3>AI-Powered Recruitment & Collaboration System</h3>
+<body style="margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f9f9f9; color:#333; line-height:1.6;">
 
-      <p>
-        <strong>MeraJob Platform</strong> is an integrated recruitment ecosystem designed to connect employers, consultants, and candidates through
-        AI-driven candidate-job matching, automated communication, and private talent pool management.
-        It simplifies recruitment workflows, enabling end-to-end hiring collaboration.
-      </p>
+  <!-- Container -->
+  <div style="max-width:900px; margin:40px auto; padding:20px; background:#fff; border-radius:10px; box-shadow:0 4px 25px rgba(0,0,0,0.1);">
 
-      <h2>Objective</h2>
-      <p>
-        To build a robust recruitment platform that automates hiring processes through
-        intelligent matching, contextual communication, and centralized collaboration between employers, consultants, and candidates.
-      </p>
+    <!-- Hero Section -->
+    <h1 style="text-align:center; font-size:2.5rem; margin-bottom:5px;">MeraJob Platform</h1>
+    <h3 style="text-align:center; font-size:1.3rem; color:#555; margin-bottom:20px;">AI-Powered Recruitment & Collaboration System</h3>
 
-      <h2>Key Features</h2>
-      <ul>
-        <li>Private candidate and consultant pools with permission-based access.</li>
-        <li>Advanced ATS (Application Tracking System) for tracking candidate progress.</li>
-        <li>
-          Event-based <strong>Communication Engine (CIM)</strong> to automate emails, SMS, and notifications using parametric templates.
-        </li>
-        <li>
-          AI-driven <strong>Job-Candidate Matching</strong> using both parameter-based and semantic search logic.
-        </li>
-        <li>Detailed analytics and candidate pipeline reporting tools.</li>
-        <li>Integrations with external APIs – Rchilli Parser, Oust Labs, and social OAuth logins.</li>
-      </ul>
+    <p><strong>MeraJob Platform</strong> is an integrated recruitment ecosystem designed to connect employers, consultants, and candidates through AI-driven candidate-job matching, automated communication, and private talent pool management. It simplifies recruitment workflows, enabling end-to-end hiring collaboration.</p>
 
-      <h2>Technology Stack</h2>
-      <table>
-        <tr>
-          <th>Layer</th>
-          <th>Technology</th>
-          <th>Purpose</th>
-        </tr>
-        <tr>
-          <td>Backend</td>
-          <td>PHP (LAMP Stack), Python</td>
-          <td>Core logic, semantic matching, and service orchestration</td>
-        </tr>
-        <tr>
-          <td>Frontend</td>
-          <td>HTML, CSS, JavaScript, jQuery</td>
-          <td>Interactive and responsive user interface</td>
-        </tr>
-        <tr>
-          <td>Database</td>
-          <td>MySQL, Cassandra</td>
-          <td>Relational and distributed data handling</td>
-        </tr>
-        <tr>
-          <td>Search Engine</td>
-          <td>Apache Solr</td>
-          <td>Parameter-based job and candidate discovery</td>
-        </tr>
-        <tr>
-          <td>Cloud Infrastructure</td>
-          <td>AWS, Azure</td>
-          <td>High-availability and secure deployment</td>
-        </tr>
-        <tr>
-          <td>Communication</td>
-          <td>Amazon SES, VivaConnect, SMSLane</td>
-          <td>Automated emails, SMS, and notifications</td>
-        </tr>
-        <tr>
-          <td>Version Control</td>
-          <td>SVN, AWS S3</td>
-          <td>Source management and automated backups</td>
-        </tr>
-      </table>
+    <!-- Objective -->
+    <h2 style="font-size:1.8rem; margin-top:30px; border-bottom:2px solid #eee; padding-bottom:5px;">Objective</h2>
+    <p>To build a robust recruitment platform that automates hiring processes through intelligent matching, contextual communication, and centralized collaboration between employers, consultants, and candidates.</p>
 
-      <h2>System Modules</h2>
-      <ul>
-        <li><strong>Employer Module:</strong> Job posting, private pool creation, candidate allocation.</li>
-        <li><strong>Consultant Module:</strong> Candidate sourcing, job sharing, and candidate remarks.</li>
-        <li><strong>Candidate Module:</strong> Profile updates, direct applications, and live job recommendations.</li>
-        <li><strong>Communication Intelligence Module (CIM):</strong> Event triggers for templates and reply tracking.</li>
-        <li><strong>ATS Module:</strong> Workflow automation for candidate movement and performance reporting.</li>
-      </ul>
+    <!-- Key Features -->
+    <h2 style="font-size:1.8rem; margin-top:30px; border-bottom:2px solid #eee; padding-bottom:5px;">Key Features</h2>
+    <ul style="margin-left:20px;">
+      <li>Private candidate and consultant pools with permission-based access.</li>
+      <li>Advanced ATS (Application Tracking System) for tracking candidate progress.</li>
+      <li>Event-based <strong>Communication Engine (CIM)</strong> to automate emails, SMS, and notifications using parametric templates.</li>
+      <li>AI-driven <strong>Job-Candidate Matching</strong> using both parameter-based and semantic search logic.</li>
+      <li>Detailed analytics and candidate pipeline reporting tools.</li>
+      <li>Integrations with external APIs – Rchilli Parser, Oust Labs, and social OAuth logins.</li>
+    </ul>
 
-      <h2>My Role</h2>
-      <p>
-        As Team Lead, directed technical architecture and module design. Built semantic job-candidate matching using Solr and Python microservices,
-        integrated external recruitment APIs, and managed AWS deployment pipelines. Oversaw CI/CD implementation, data workflow optimization, and cross-team collaboration.
-      </p>
-
-      <h2>Impact</h2>
-      <ul>
-        <li>Reduced recruiter workload through AI-driven automation.</li>
-        <li>Enhanced team visibility across hiring pipelines.</li>
-        <li>Improved candidate experience with contextual communication.</li>
-      </ul>
-
-      <h3>Keywords</h3>
-      <p>
-        Laravel · Node.js · Python · MySQL · Cassandra · AWS · Solr · REST APIs · ATS · Recruitment Platform ·
-        Semantic Matching · CI/CD · Cloud Architecture
-      </p>
+    <!-- Technology Stack Badges -->
+    <h2 style="font-size:1.8rem; margin-top:30px; border-bottom:2px solid #eee; padding-bottom:5px;">Technology Stack</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px;">
+      <span style="display:inline-block; padding:8px 12px; background:#1a73e8; color:#fff; border-radius:20px; font-size:0.9rem; font-weight:500;"><i class="fab fa-laravel"></i> Laravel</span>
+      <span style="display:inline-block; padding:8px 12px; background:#1a73e8; color:#fff; border-radius:20px; font-size:0.9rem; font-weight:500;"><i class="fab fa-node-js"></i> Node.js</span>
+      <span style="display:inline-block; padding:8px 12px; background:#1a73e8; color:#fff; border-radius:20px; font-size:0.9rem; font-weight:500;"><i class="fab fa-python"></i> Python</span>
+      <span style="display:inline-block; padding:8px 12px; background:#1a73e8; color:#fff; border-radius:20px; font-size:0.9rem; font-weight:500;"><i class="fas fa-database"></i> MySQL</span>
+      <span style="display:inline-block; padding:8px 12px; background:#1a73e8; color:#fff; border-radius:20px; font-size:0.9rem; font-weight:500;"><i class="fas fa-server"></i> Cassandra</span>
+      <span style="display:inline-block; padding:8px 12px; background:#1a73e8; color:#fff; border-radius:20px; font-size:0.9rem; font-weight:500;"><i class="fab fa-aws"></i> AWS</span>
+      <span style="display:inline-block; padding:8px 12px; background:#1a73e8; color:#fff; border-radius:20px; font-size:0.9rem; font-weight:500;"><i class="fas fa-search"></i> Solr</span>
+      <span style="display:inline-block; padding:8px 12px; background:#1a73e8; color:#fff; border-radius:20px; font-size:0.9rem; font-weight:500;"><i class="fas fa-code"></i> REST APIs</span>
+      <span style="display:inline-block; padding:8px 12px; background:#1a73e8; color:#fff; border-radius:20px; font-size:0.9rem; font-weight:500;"><i class="fas fa-cogs"></i> CI/CD</span>
     </div>
-  </section>
 
-  <footer>
-    <p>© 2025 Amit Jha | <a href="https://amitjha-dev.github.io">Portfolio</a></p>
-  </footer>
-</body>
-</html>
+    <!-- Technology Table -->
+    <table style="width:100%; border-collapse:collapse; margin-bottom:20px;">
+      <tr style="background:#f1f1f1; font-weight:600;">
+        <th style="border:1px solid #ddd; padding:10px; text-align:left;">Layer</th>
+        <th style="border:1px solid #ddd; padding:10px; text-align:left;">Technology</th>
+        <th style="border:1px solid #ddd; padding:10px; text-align:left;">Purpose</th>
+      </tr>
+      <tr><td style="border:1px solid #ddd; padding:10px;">Backend</td><td style="border:1px solid #ddd; padding:10px;">PHP (LAMP), Python</td><td style="border:1px solid #ddd; padding:10px;">Core logic, semantic matching, service orchestration</td></tr>
+      <tr><td style="border:1px solid #ddd; padding:10px;">Frontend</td><td style="border:1px solid #ddd; padding:10px;">HTML, CSS, JavaScript, jQuery</td><td style="border:1px solid #ddd; padding:10px;">Interactive and responsive UI</td></tr>
+      <tr><td style="border:1px solid #ddd; padding:10px;">Database</td><td style="border:1px solid #ddd; padding:10px;">MySQL, Cassandra</td><td style="border:1px solid #ddd; padding:10px;">Relational and distributed data handling</td></tr>
+      <tr><td style="border:1px solid #ddd; padding:10px;">Search Engine</td><td style="border:1px solid #ddd; padding:10px;">Apache Solr</td><td style="border:1px solid #ddd; padding:10px;">Job and candidate discovery</td></tr>
+      <tr><td style="border:1px solid #ddd; padding:10px;">Cloud Infrastructure</td><td style="border:1px solid #ddd; padding:10px;">AWS, Azure</td><td style="border:1px solid #ddd; padding:10px;">High-availability and secure deployment</td></tr>
+      <tr><td style="border:1px solid #ddd; padding:10px;">Communication</td><td style="border:1px solid #ddd; padding:10px;">Amazon SES, VivaConnect, SMSLane</td><td style="border:1px solid #ddd; padding:10px;">Automated emails, SMS, notifications</td></tr>
+      <tr><td style="border:1px solid #ddd; padding:10px;">Version Control</td><td style="border:1px solid #ddd; padding:10px;">SVN, AWS S3</td><td style="border:1px solid #ddd; padding:10px;">Source management and backups</td></tr>
+    </table>
+
+    <!-- System Modules -->
+    <h2 style="font-size:1.8rem; margin-top:30px; border-bottom:2px solid #eee; padding-bottom:5px;">System Modules</h2>
+    <ul style="margin-left:20px;">
+      <li><strong>Employer Module:</strong> Job posting, private pool creation, candidate allocation.</li>
+      <li><strong>Consultant Module:</strong> Candidate sourcing, job sharing, and candidate remarks.</li>
+      <li><strong>Candidate Module:</strong> Profile updates, direct applications, and live job recommendations.</li>
+      <li><strong>Communication Intelligence Module (CIM):</strong> Event triggers for templates and reply tracking.</li>
+      <li><strong>ATS Module:</strong> Workflow automation for candidate movement and performance reporting.</li>
+    </ul>
+
+    <!-- My Role -->
+    <h2 style="font-size:1.8rem; margin-top:30px; border-bottom:2px solid #eee; padding-bottom:5px;">My Role</h2>
+    <p>As Team Lead, directed technical architecture and module design. Built semantic job-candidate matching using Solr and Python microservices, integrated external recruitment APIs, and managed AWS deployment pipelines. Oversaw CI/CD implementation, data workflow optimization, and cross
